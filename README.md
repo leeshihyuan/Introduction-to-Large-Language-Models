@@ -1,6 +1,6 @@
 臺灣自編大學教科書
-# H1 大模型導論
-# H1 Introduction to Large Language Models
+# 大模型導論
+# Introduction to Large Language Models
 
 
 第 1 篇
