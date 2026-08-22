@@ -67,8 +67,11 @@ Vision, Mathematics, and Engineering Foundations　｜　第 1–4 章
 
 ## 第 1 章　大模型全貌、能力邊界與臺灣機會
 The LLM Landscape, Capability Boundaries, and Taiwan Opportunity　｜　難度：核心
+
 叫獸開講　一位雲林的高中老師問模型「我們學校的免試入學超額比序怎麼算」，模型講得頭頭是道，卻把新北市的規則搬過來。它不是不會講中文，它是不認識臺灣。
+
 本章任務　從使用者看到的聊天介面回推資料、模型、後訓練、檢索、工具、部署與治理的完整生命週期，並說明臺灣為何需要能表達本地語言、知識、價值與產業需求的大模型。
+
 節次規劃
 1.1　人工智慧、生成式 AI、基礎模型、大語言模型與推理模型的關係
 1.2　大模型能做什麼：生成、理解、翻譯、摘要、程式、工具使用與多模態互動
@@ -78,17 +81,23 @@ The LLM Landscape, Capability Boundaries, and Taiwan Opportunity　｜　難度�
 1.6　臺灣本土大模型的必要性：繁體中文、臺灣用語、制度知識、文化與資料主權
 1.7　臺灣的工程優勢：半導體、伺服器代工、邊緣 AI、精密製造與跨域應用場景
 1.8　本書地圖：四級硬體、四十章能力鏈與十二個貫穿式系統案例
+
 程式實作
 ・程式 1A：以同一組繁體中文提示測試三種模型，記錄正確性、臺灣用語、token 數、延遲與成本，做成雷達圖。
 ・程式 1B：LLM 生命週期檢查器，輸入應用需求後自動輸出資料、模型、風險與部署待辦清單。
 ・程式 1C：臺灣常識 30 題快測腳本（地名、法規、校務、產業術語），輸出各模型的錯誤型態分類。
+
 系統案例　比較 TAIDE、Taiwan LLM 與國際通用開放權重模型在臺灣公文、校務規章與電子製造詞彙上的表現差異，並歸納錯誤來源是語料、tokenizer 還是對齊。
+
 成果檢核　完成「臺灣本土大模型需求規格書 v0.1」，定義使用者、任務、語言、資料邊界、評測指標與不可接受風險。
 
 ## 第 2 章　從統計語言模型到 Transformer 與基礎模型
 From Statistical Language Models to Foundation Models　｜　難度：核心
+
 叫獸開講　2017 年那篇論文的標題說「注意力就是你需要的一切」。但真正改變世界的不是那句話，而是它讓 GPU 終於可以同時算完一整個句子。
+
 本章任務　用一條可實驗的技術史串起 n-gram、神經語言模型、序列到序列、注意力、Transformer、預訓練與指令對齊，讓學生理解每個突破解決了什麼工程問題，而不是背模型名稱。
+
 節次規劃
 2.1　自然語言處理任務與語言模型的核心問題
 2.2　n-gram、平滑法、資料稀疏與長距離依賴的極限
@@ -151,6 +160,7 @@ Language Modeling, Taiwan Corpora, and Token Engineering　｜　第 5–9 章
 
 ## 第 5 章　機率語言模型、訓練目標與基本評量
 Probabilistic Language Modeling, Objectives, and Basic Evaluation　｜　難度：核心
+
 叫獸開講　兩個模型的困惑度分別是 12.3 和 12.8，你能說第一個比較好嗎？如果它們用的是不同的 tokenizer，這兩個數字根本不能放在一起比。
 本章任務　從下一詞元預測的機率定義出發，理解自回歸、遮罩式與序列到序列目標，並建立資料切分、基準與洩漏防治觀念。
 節次規劃
@@ -168,7 +178,8 @@ Probabilistic Language Modeling, Objectives, and Basic Evaluation　｜　難度
 ・程式 5C：資料污染偵測器，用 n-gram 重疊檢查測試題是否出現在訓練語料中。
 系統案例　比較新聞、公文、社群與製造技術文件的 domain perplexity，找出模型最陌生的臺灣文本類型並排出補資料優先序。
 成果檢核　完成基準評量規格，明確區分模型品質提升、tokenizer 差異與資料洩漏造成的假進步。
-第 6 章　Unicode、繁體中文與臺灣語言現象
+
+## 第 6 章　Unicode、繁體中文與臺灣語言現象
 Unicode, Traditional Chinese, and Taiwan Language Phenomena　｜　難度：核心
 叫獸開講　把「臺」統一改成「台」，看起來很貼心，直到有人發現公文裡的「臺北市政府」變成了不存在的機關名稱。正規化是有代價的，代價要寫下來。
 本章任務　處理臺灣文本中最常被忽略的編碼與語言細節，包括異體字、全半形、注音、臺羅、英數混寫、單位與專有名詞。
@@ -187,7 +198,8 @@ Unicode, Traditional Chinese, and Taiwan Language Phenomena　｜　難度：核
 ・程式 6C：臺羅與注音的往返轉換測試，檢查聲調符號在不同正規化下的存活率。
 系統案例　清理教育部公文、校務文件與電子製造規格書的混合語料，保留法規條號、料號與量測單位。
 成果檢核　完成「臺灣文本工程規格 v1.0」與不少於 100 筆的單元測試資料。
-第 7 章　分詞器、詞彙表與臺灣語言效率
+
+## 第 7 章　分詞器、詞彙表與臺灣語言效率
 Tokenizers, Vocabularies, and Taiwan Language Efficiency　｜　難度：核心
 叫獸開講　同一句話，英文用 12 個 token，繁體中文卻用了 31 個。你付的 API 費用是英文的兩倍多，而模型能記住的上下文只有人家的一半。這就是 token 稅。
 本章任務　從字、詞、subword 到 byte-based tokenization，實作 BPE 並用 token fertility、壓縮率與下游表現評估繁體中文詞彙表。
@@ -206,7 +218,8 @@ Tokenizers, Vocabularies, and Taiwan Language Efficiency　｜　難度：核心
 ・程式 7C：token 稅計算器，把 fertility 換算成 API 成本、上下文容量與訓練 GPU 小時。
 系統案例　為 MiniFormosaGPT 設計兼顧繁體中文、英文、程式碼、臺羅與製造料號的詞彙表，並記錄每個設計決策的理由。
 成果檢核　提交 tokenizer model、詞彙表、特殊詞元規格與臺灣專屬 tokenizer benchmark 報告。
-第 8 章　語料取得、授權、個資與資料治理
+
+## 第 8 章　語料取得、授權、個資與資料治理
 Corpus Acquisition, Licensing, Privacy, and Data Governance　｜　難度：核心
 叫獸開講　「網路上找得到」不等於「可以拿來訓練」。這一章不會給你法律意見，但會讓你在被問到「這些資料哪裡來的」時，能立刻打開一份說得清楚的清冊。
 本章任務　建立合法、可追溯、可退出、能說明的資料資產，並清楚標示哪些判斷必須交給法務與倫理審查。
@@ -225,10 +238,14 @@ Corpus Acquisition, Licensing, Privacy, and Data Governance　｜　難度：核
 ・程式 8C：資料退出（opt-out）處理器，接受移除請求後產生受影響切片與再訓練建議。
 系統案例　規劃一個由政府公開資料、校內自有資料與出版社授權資料組成的臺灣教育語料庫，含權利基礎與退出流程。
 成果檢核　交付資料清冊、權利基礎、風險分級、去識別測試與 Data Card 草案；所有法律判斷須註明待專業確認。
-第 9 章　大規模資料清理、去重、混合與合成資料
+
+## 第 9 章　大規模資料清理、去重、混合與合成資料
 Cleaning, Deduplication, Mixtures, and Synthetic Data at Scale　｜　難度：核心／進階
+
 叫獸開講　一份沒去重的語料，模型會把同一段廣告詞背得比課文還熟。垃圾進、垃圾出，這句話在大模型時代要改寫成：重複進、幻覺出。
+
 本章任務　把原始網頁、PDF、OCR 與文件轉成可訓練樣本，處理品質、重複、污染、語言比例與合成資料回授。
+
 節次規劃
 9.1　HTML、PDF、Office、OCR、程式碼與對話記錄的內容抽取
 9.2　規則式與模型式品質過濾：長度、語言、毒性、廣告與樣板頁
@@ -238,16 +255,19 @@ Cleaning, Deduplication, Mixtures, and Synthetic Data at Scale　｜　難度：
 9.6　合成資料的生成、篩選、標註與模型崩壞風險
 9.7　資料規模、品質與多樣性的三角取捨與可觀測指標
 9.8　臺灣語料的分域配比：教育、法規、新聞、產業、生活與本土語言
+
 程式實作
 ・程式 9A：建立可平行化的清理管線，逐階段輸出保留率、樣本範例與品質統計。
 ・程式 9B：以 MinHash + LSH 做近似去重，量測去重前後的困惑度與記憶化差異。
 ・程式 9C：合成資料工廠，用教師模型生成臺灣情境問答並以規則與人工雙重篩選。
 系統案例　建構 MiniFormosaGPT 的預訓練語料混合方案，公開每個資料源的比例、來源與被剔除的原因。
 成果檢核　交付語料統計報表、去重與去污染紀錄、混合配方與可重現的清理腳本。
-第 3 篇　Transformer 從零實作
+
+## 第 3 篇　Transformer 從零實作
 Transformers from Scratch　｜　第 10–13 章
 本篇承諾：不依賴高階函式庫，親手寫出 embedding、attention、Transformer block 與可生成文字的 MiniFormosaGPT。
-第 10 章　詞嵌入、語意空間與位置表示
+
+## 第 10 章　詞嵌入、語意空間與位置表示
 Embeddings, Semantic Spaces, and Positional Representations　｜　難度：核心
 叫獸開講　把「臺南」減掉「臺灣」再加上「日本」，向量會落在「大阪」附近。語意空間不是比喻，它是一個你可以拿尺去量的地方。
 本章任務　理解詞元如何變成向量、語意如何在高維空間中被幾何化，以及位置資訊如何被注入沒有順序概念的注意力機制。
@@ -266,7 +286,8 @@ Embeddings, Semantic Spaces, and Positional Representations　｜　難度：核
 ・程式 10C：詞彙擴充實驗，比較隨機初始化與平均子詞初始化對收斂速度的影響。
 系統案例　建立臺灣專有名詞語意檢索原型，比較不同嵌入模型在校務、法規與製造詞彙上的召回率。
 成果檢核　提交嵌入分析報告，含位置編碼比較、外推測試與臺灣詞彙語意地圖。
-第 11 章　自注意力、因果遮罩與多頭注意力
+
+## 第 11 章　自注意力、因果遮罩與多頭注意力
 Self-Attention, Causal Masking, and Multi-Head Attention　｜　難度：核心
 叫獸開講　這一章是整本書的心臟。寫完之後，你不會再覺得注意力是黑盒子，你會知道那張 T×T 的矩陣裡每一格代表誰在看誰。
 本章任務　從無權重的簡化注意力一路推到帶可訓練權重、因果遮罩、dropout 與多頭的完整實作，並理解每一步的計算成本。
@@ -285,7 +306,8 @@ Self-Attention, Causal Masking, and Multi-Head Attention　｜　難度：核心
 ・程式 11C：量測序列長度對時間與記憶體的平方成長，並比較 GQA 的節省幅度。
 系統案例　製作可在瀏覽器操作的注意力教學元件，讓高中生調整句子與 head 數並即時看到權重變化。
 成果檢核　提交通過全部測試的多頭因果注意力模組，並能用一張圖向非本科系聽眾解釋它。
-第 12 章　Transformer Block 與現代 GPT 元件
+
+## 第 12 章　Transformer Block 與現代 GPT 元件
 Transformer Blocks and Modern GPT Components　｜　難度：核心
 叫獸開講　GPT 的祕密不在於它有多複雜，而在於它把同一個積木疊了幾十層。看懂一塊積木，你就看懂了整棟樓。
 本章任務　把注意力、前饋網路、正規化與殘差連接組裝成 Transformer block，並比較原始 GPT 與現代 Llama-style 元件的差異。
@@ -304,7 +326,8 @@ Transformer Blocks and Modern GPT Components　｜　難度：核心
 ・程式 12C：消融實驗，比較 Pre-LN 與 Post-LN 在深層小模型上的訓練穩定性。
 系統案例　設計 MiniFormosaGPT 的三種尺寸設定（tiny/small/base），對應 A、B、C 三級硬體並附資源估算。
 成果檢核　交付通過形狀與梯度測試的 Transformer block 模組，以及三種尺寸的設定檔與資源預估表。
-第 13 章　從零建構 MiniFormosaGPT 與文字生成器
+
+## 第 13 章　從零建構 MiniFormosaGPT 與文字生成器
 Building MiniFormosaGPT and a Text Generator from Scratch　｜　難度：核心／里程碑
 叫獸開講　當你的模型第一次吐出一句通順的繁體中文，那句話可能毫無意義。但那是你自己寫的每一行程式算出來的，那一刻的感覺沒有任何 API 能給你。
 本章任務　把前三章的元件組裝成完整的 GPT 模型，載入自訓 tokenizer 與臺灣語料，完成第一次可生成文字的端到端訓練。
@@ -323,10 +346,12 @@ Building MiniFormosaGPT and a Text Generator from Scratch　｜　難度：核�
 ・程式 13C：訓練健檢腳本，自動偵測梯度爆炸、學習率過大與資料錯位。
 系統案例　以臺灣中小學課文與百科語料訓練 tiny 版模型，記錄從亂碼到成句的訓練里程碑並做成縮時影片。
 成果檢核　交付可執行的 MiniFormosaGPT 專案，含權重、訓練曲線、生成樣本與一頁式 Model Card 草案。
-第 4 篇　預訓練、解碼與實驗科學
+
+# 第 4 篇　預訓練、解碼與實驗科學
 Pretraining, Decoding, and Experimental Science　｜　第 14–17 章
 本篇承諾：把「跑得動」升級為「說得清楚」。訓練迴圈、解碼策略、診斷方法與尺度定律，讓每個結論都有數據支撐。
-第 14 章　解碼、取樣、受限生成與 KV Cache
+
+## 第 14 章　解碼、取樣、受限生成與 KV Cache
 Decoding, Sampling, Constrained Generation, and KV Cache　｜　難度：核心
 叫獸開講　同一個模型，把溫度從 0.2 調到 1.2，它會從一個嚴謹的助教變成一個滿嘴胡話的詩人。權重完全沒變，變的只是你怎麼從機率裡抽籤。
 本章任務　掌握生成階段的所有可調旋鈕，理解取樣策略如何改變輸出品質，並用 KV cache 讓生成速度提升一個數量級。
@@ -345,7 +370,8 @@ Decoding, Sampling, Constrained Generation, and KV Cache　｜　難度：核心
 ・程式 14C：以文法約束強制模型輸出合法 JSON，測試失敗率與修復策略。
 系統案例　為校務問答服務設計解碼參數表，讓事實型問題走低溫受限生成、開放型問題走高溫取樣。
 成果檢核　提交解碼策略實驗報告，含參數掃描、品質評分、速度量測與推薦設定。
-第 15 章　預訓練迴圈、最佳化與訓練穩定性
+
+## 第 15 章　預訓練迴圈、最佳化與訓練穩定性
 Pretraining Loops, Optimization, and Training Stability　｜　難度：核心／進階
 叫獸開講　訓練跑到第 8000 步突然 loss 變成 NaN，這是每個做大模型的人都會遇到的成年禮。這一章教你怎麼在它發生前就看見徵兆。
 本章任務　建立工業級的預訓練迴圈，涵蓋學習率排程、梯度累積、混合精度、checkpoint 續訓與發散偵測。
@@ -364,7 +390,8 @@ Pretraining Loops, Optimization, and Training Stability　｜　難度：核心�
 ・程式 15C：訓練哨兵，即時監看梯度範數與 loss spike 並自動回滾至前一個 checkpoint。
 系統案例　在實驗室 GPU 上完成一次 24 小時不中斷的 small 版預訓練，全程記錄資源、成本與異常事件。
 成果檢核　交付訓練日誌、監控圖表、事件處理紀錄與可續訓的 checkpoint 套件。
-第 16 章　訓練診斷、實驗科學與可重現報告
+
+## 第 16 章　訓練診斷、實驗科學與可重現報告
 Training Diagnostics, Experimental Science, and Reproducible Reports　｜　難度：核心
 叫獸開講　「我改了這個之後分數變高了」不是結論，那是巧合的候選人。跑三個 seed，你才知道自己是發現了什麼，還是只是運氣好。
 本章任務　把模型訓練當成科學實驗來做，建立假設、控制變因、統計檢定與誠實報告的完整流程。
@@ -383,7 +410,8 @@ Training Diagnostics, Experimental Science, and Reproducible Reports　｜　難
 ・程式 16C：記憶化探測腳本，量測模型逐字複述訓練語料的比例。
 系統案例　針對「詞彙表大小對繁中生成品質的影響」設計並執行一次完整實驗，產出可投稿等級的報告。
 成果檢核　提交含假設、方法、統計、限制與負面結果的實驗報告，並附一鍵重現腳本。
-第 17 章　尺度定律、資料模型配比與算力預算
+
+## 第 17 章　尺度定律、資料模型配比與算力預算
 Scaling Laws, Data-Model Balance, and Compute Budgets　｜　難度：核心／進階
 叫獸開講　如果你手上只有 4 張 GPU 和三個月，你該訓練一個大模型配少量資料，還是小模型配大量資料？這個問題有數學答案，而且答案跟直覺相反。
 本章任務　用尺度定律把「我有多少算力」翻譯成「我應該訓練多大的模型、餵多少 token」，並建立可稽核的算力預算。
@@ -402,10 +430,12 @@ Scaling Laws, Data-Model Balance, and Compute Budgets　｜　難度：核心／
 ・程式 17C：資料受限模擬，比較單次與多輪重複訓練的驗證損失軌跡。
 系統案例　為「臺灣本土 3B 模型」撰寫算力預算書，比較自建叢集、國網中心與雲端租用三種方案。
 成果檢核　提交尺度化推估表與算力預算書，含假設、誤差範圍與決策建議。
-第 5 篇　算力、系統與現代架構
+
+# 第 5 篇　算力、系統與現代架構
 Compute, Systems, and Modern Architectures　｜　第 18–21 章
 本篇承諾：理解 GPU 與分散式系統如何決定模型上限，並認識臺灣在晶片、伺服器與國家級算力上的真實位置。
-第 18 章　GPU、混合精度、記憶體與高效核心
+
+## 第 18 章　GPU、混合精度、記憶體與高效核心
 GPUs, Mixed Precision, Memory, and Efficient Kernels　｜　難度：進階
 叫獸開講　GPU 不是「比較快的 CPU」。它是一台需要你不斷餵資料的怪獸，餵不夠快，8 萬元的卡就在那裡空轉。
 本章任務　理解 GPU 架構如何決定訓練效率，掌握精度格式、記憶體配置與高效核心，把 MFU 從個位數拉到可接受的水準。
@@ -424,7 +454,8 @@ GPUs, Mixed Precision, Memory, and Efficient Kernels　｜　難度：進階
 ・程式 18C：以 profiler 找出訓練瓶頸並套用三種優化，記錄前後 MFU。
 系統案例　把第 15 章的訓練腳本優化到 MFU 提升一倍以上，並撰寫優化決策紀錄。
 成果檢核　交付效能剖析報告，含瓶頸分析、優化前後對照與硬體採購建議。
-第 19 章　分散式訓練：資料、張量、管線、上下文與專家平行
+
+## 第 19 章　分散式訓練：資料、張量、管線、上下文與專家平行
 Distributed Training: Data, Tensor, Pipeline, Context, and Expert Parallelism　｜　難度：進階
 叫獸開講　一張卡放不下的模型，就要拆。問題是怎麼拆才不會讓 8 張卡的速度只有 3 張卡的效果。這一章講的就是切法。
 本章任務　掌握五種平行策略的原理、通訊成本與組合方式，能依硬體條件選出可行的分散式訓練方案。
@@ -443,10 +474,15 @@ Distributed Training: Data, Tensor, Pipeline, Context, and Expert Parallelism　
 ・程式 19C：平行策略選擇器，輸入模型與硬體規格後輸出可行組合與預估效率。
 系統案例　規劃一個 8 卡實驗室叢集的 3B 模型持續預訓練方案，含網路拓樸、儲存、排程與故障處理。
 成果檢核　提交分散式訓練決策表與實測擴展效率曲線，說明每個選擇的理由與代價。
-第 20 章　現代架構：Llama-style、長上下文、MoE 與非 Transformer 路線
+
+## 第 20 章　現代架構：Llama-style、長上下文、MoE 與非 Transformer 路線
+
 Modern Architectures: Llama-Style, Long Context, MoE, and Beyond Transformers　｜　難度：進階
+
 叫獸開講　每隔幾個月就有人宣布「Transformer 要被取代了」。到目前為止它還沒被取代，但那些挑戰者確實留下了很多好東西。
+
 本章任務　系統比較當代主流架構的設計選擇與適用邊界，並認識線性注意力、狀態空間模型與混合架構的真實表現。
+
 節次規劃
 20.1　Llama-style 標準配方：RMSNorm、RoPE、SwiGLU、GQA
 20.2　長上下文技術：位置外推、YaRN、滑動視窗與注意力稀疏化
@@ -456,13 +492,15 @@ Modern Architectures: Llama-Style, Long Context, MoE, and Beyond Transformers　
 20.6　混合架構與局部全域注意力的折衷
 20.7　多模態原生架構的早期融合與後期融合
 20.8　架構選型決策樹：任務、硬體、延遲、成本與維護能力
+
 程式實作
 ・程式 20A：實作 RoPE 外推與 YaRN 縮放，量測不同上下文長度的困惑度。
 ・程式 20B：迷你 MoE 層實作，觀察路由分布、負載不均與輔助損失效果。
 ・程式 20C：以相同參數預算比較 dense、MoE 與線性注意力小模型的訓練與推論表現。
 系統案例　為「臺灣長文件法規問答」選擇架構方案，需比較長上下文與 RAG 兩條路線的成本與品質。
 成果檢核　提交架構選型報告，含決策樹、實測數據、長文評測結果與維運風險評估。
-第 21 章　臺灣算力生態：AI 晶片、伺服器、資料中心與國家級叢集
+
+## 第 21 章　臺灣算力生態：AI 晶片、伺服器、資料中心與國家級叢集
 Taiwan Compute Ecosystem: AI Chips, Servers, Data Centers, and National Clusters　｜　難度：核心／臺灣特色
 叫獸開講　全世界的 AI 伺服器幾乎都在臺灣組裝出貨，但臺灣自己能用的算力有多少？這一章要學生看清楚，我們站在供應鏈的哪一格。
 本章任務　把「臺灣有半導體優勢」這句口號拆解成可查證的產業結構、算力來源與學生真正能取得的資源清單。
@@ -481,10 +519,12 @@ Taiwan Compute Ecosystem: AI Chips, Servers, Data Centers, and National Clusters
 ・程式 21C：邊緣裝置推論基準測試，在 Jetson 等級硬體上量測小模型的延遲與功耗。
 系統案例　盤點雲科大智慧科技學院可用的算力資源，設計一份讓大學部學生也能排到 GPU 的使用制度草案。
 成果檢核　提交臺灣算力生態盤點報告與個人專題的算力取得計畫，含備援方案。
-第 6 篇　本土化後訓練與對齊
+
+# 第 6 篇　本土化後訓練與對齊
 Localization, Post-Training, and Alignment　｜　第 22–26 章
 本篇承諾：沒有算力從零預訓練也能做出臺灣模型。持續預訓練、指令微調、LoRA/QLoRA、偏好對齊與蒸餾一路打通。
-第 22 章　持續預訓練、語言適配與領域適配
+
+## 第 22 章　持續預訓練、語言適配與領域適配
 Continued Pretraining, Language Adaptation, and Domain Adaptation　｜　難度：核心／進階
 叫獸開講　從零訓練一個 7B 模型要燒掉幾千萬。但把一個現成的開放權重模型「教會臺灣話」，一張 GPU 加兩週就能看到成果。這才是臺灣該走的路。
 本章任務　在既有開放權重模型上做繁體中文與領域適配，處理詞彙擴充、災難性遺忘與授權合規。
@@ -503,7 +543,8 @@ Continued Pretraining, Language Adaptation, and Domain Adaptation　｜　難度
 ・程式 22C：遺忘偵測套件，跨語言與跨任務量測適配副作用。
 系統案例　以開放權重小模型完成一次繁體中文與智慧製造領域的雙重適配，並記錄每階段的能力變化。
 成果檢核　交付適配後模型、訓練配方、遺忘量測報告與授權合規檢查表。
-第 23 章　監督式指令微調與高品質對話資料
+
+## 第 23 章　監督式指令微調與高品質對話資料
 Supervised Fine-Tuning and High-Quality Instruction Data　｜　難度：核心
 叫獸開講　指令微調的資料，一千筆精心寫的比十萬筆隨便湊的有用。這一章最花時間的不是訓練，是寫資料。
 本章任務　建立高品質繁體中文指令資料集並完成 SFT，理解資料品質、多樣性與模板設計如何決定模型行為。
@@ -522,7 +563,8 @@ Supervised Fine-Tuning and High-Quality Instruction Data　｜　難度：核心
 ・程式 23C：微調前後行為對照器，同組提示批次比較輸出差異。
 系統案例　建立 1000 筆臺灣教育情境指令資料集（校務、課程、學習輔導），全部標註來源與審核者。
 成果檢核　交付指令資料集、Data Card、SFT 模型與微調前後的行為比較報告。
-第 24 章　LoRA、QLoRA、Adapter 與參數高效微調
+
+## 第 24 章　LoRA、QLoRA、Adapter 與參數高效微調
 LoRA, QLoRA, Adapters, and Parameter-Efficient Fine-Tuning　｜　難度：核心
 叫獸開講　QLoRA 讓一張 16GB 的遊戲顯卡也能微調 7B 模型。這件事的意義是：本土模型的門檻，從國家隊降到了大學專題。
 本章任務　掌握參數高效微調的數學原理與工程實作，能在有限 VRAM 上完成可用的模型客製化。
@@ -541,7 +583,8 @@ LoRA, QLoRA, Adapters, and Parameter-Efficient Fine-Tuning　｜　難度：核�
 ・程式 24C：多 LoRA 路由服務，依請求類型動態載入不同任務的轉接器。
 系統案例　為校務助理、製造維修助理與本土語言教學分別訓練三組 LoRA，共用同一底模並比較切換成本。
 成果檢核　交付三組 LoRA 權重、設定檔、VRAM 與品質對照表，以及熱插拔服務範例。
-第 25 章　偏好資料、RLHF、DPO 與安全對齊
+
+## 第 25 章　偏好資料、RLHF、DPO 與安全對齊
 Preference Data, RLHF, DPO, and Safety Alignment　｜　難度：進階
 叫獸開講　對齊不是讓模型變乖，是讓模型知道「在臺灣、在這個場域、對這個使用者」，什麼樣的回答才算好。這件事沒有人能替你決定。
 本章任務　理解從人類回饋學習的完整鏈條，實作 DPO 並建立符合臺灣情境的安全與拒答規範。
@@ -560,7 +603,8 @@ Preference Data, RLHF, DPO, and Safety Alignment　｜　難度：進階
 ・程式 25C：安全規範測試集執行器，量測拒答率、過度拒答與繞過成功率。
 系統案例　為臺灣中學生學習助理制定安全規範與拒答政策，並以紅隊測試驗證其穩健性。
 成果檢核　交付偏好資料集、DPO 模型、安全規範文件與對齊稅量測報告。
-第 26 章　知識蒸餾、小型語言模型與臺灣邊緣模型
+
+## 第 26 章　知識蒸餾、小型語言模型與臺灣邊緣模型
 Knowledge Distillation, Small Language Models, and Taiwan Edge Models　｜　難度：核心／進階
 叫獸開講　工廠裡的維修助理不能等雲端，也不該把製程資料傳出去。能在產線電腦上跑的 1B 模型，價值遠大於跑在別人機房的 70B。
 本章任務　用蒸餾與小模型策略，在延遲、成本、隱私與品質之間找到臺灣產業真正能落地的平衡點。
@@ -579,10 +623,12 @@ Knowledge Distillation, Small Language Models, and Taiwan Edge Models　｜　�
 ・程式 26C：在邊緣裝置上量測小模型的延遲、記憶體、功耗與熱穩定性。
 系統案例　為智慧製造維修助理蒸餾一個可在產線工控機離線運行的小模型，並與雲端大模型做品質對照。
 成果檢核　交付小模型權重、蒸餾配方、邊緣效能報告與地端部署可行性評估。
-第 7 篇　推理、知識更新與提示工程
+
+# 第 7 篇　推理、知識更新與提示工程
 Reasoning, Knowledge Update, and Prompt Engineering　｜　第 27–30 章
 本篇承諾：讓模型「想得更久、記得更準、講得更可控」。從推理模型、模型編輯到結構化輸出與基礎 RAG。
-第 27 章　推理模型、測試時計算、驗證器與可驗證獎勵強化學習
+
+## 第 27 章　推理模型、測試時計算、驗證器與可驗證獎勵強化學習
 Reasoning Models, Test-Time Compute, Verifiers, and RLVR　｜　難度：進階
 叫獸開講　讓模型「想久一點」比讓模型「變大一點」便宜太多了。但想久了不一定想對，所以你還需要一個會改考卷的驗證器。
 本章任務　理解推理模型的訓練與推論範式，實作測試時計算擴展與驗證器，並建立可驗證獎勵的訓練資料。
@@ -601,7 +647,8 @@ Reasoning Models, Test-Time Compute, Verifiers, and RLVR　｜　難度：進階
 ・程式 27C：推理成本控制器，依題目難度動態決定思考預算。
 系統案例　建立臺灣高中數學與物理題庫的推理評測，比較直接作答、思考鏈與多樣本投票的表現與成本。
 成果檢核　提交推理實驗報告，含正確率、成本曲線、驗證器設計與失敗案例分析。
-第 28 章　模型編輯、機器遺忘與持續學習
+
+## 第 28 章　模型編輯、機器遺忘與持續學習
 Model Editing, Machine Unlearning, and Continual Learning　｜　難度：進階
 叫獸開講　校長換人了，模型還在講前任的名字。重訓一次要三天，但改掉這一個事實，其實只要動幾層權重。問題是，你怎麼確定沒改壞別的？
 本章任務　掌握在不重新訓練的前提下修改模型知識的方法，並建立編輯、遺忘與持續學習的驗證流程。
@@ -620,7 +667,8 @@ Model Editing, Machine Unlearning, and Continual Learning　｜　難度：進�
 ・程式 28C：知識版本管理器，記錄每次編輯的內容、理由、審核者與回滾點。
 系統案例　為校務知識模型設計知識更新流程，處理人事異動、法規修訂與錯誤更正三種情境。
 成果檢核　交付編輯與遺忘實驗報告，以及一份可實際執行的知識更新治理程序書。
-第 29 章　提示工程、情境工程、結構化輸出與函式呼叫
+
+## 第 29 章　提示工程、情境工程、結構化輸出與函式呼叫
 Prompt Engineering, Context Engineering, Structured Outputs, and Function Calling　｜　難度：核心
 叫獸開講　很多人以為提示工程就是「請你扮演一位專家」。真正的提示工程是把需求寫成規格、把規格寫成可測試的輸入輸出契約。
 本章任務　把提示從技巧升級為工程實踐，建立可版本控制、可測試、可回歸的提示與情境管理流程。
@@ -640,7 +688,7 @@ Prompt Engineering, Context Engineering, Structured Outputs, and Function Callin
 系統案例　為臺灣公文摘要與批示建議設計提示規格，含輸出契約、禁止事項與人工覆核欄位。
 成果檢核　交付提示規格書、測試套件與回歸測試結果，證明提示變更不會造成靜默退化。
 
-第 30 章　Embedding、向量檢索與基礎 RAG
+# 第 30 章　Embedding、向量檢索與基礎 RAG
 Embeddings, Vector Retrieval, and Foundational RAG　｜　難度：核心
 叫獸開講　與其教模型背下全校的規章，不如讓它學會查。RAG 的價值不只是準確，更是每一句話都能翻回原始文件的第幾頁。
 本章任務　建構完整的檢索增強生成系統，從切塊、嵌入、索引到重排序與引用，並建立可量測的檢索品質指標。
@@ -659,11 +707,12 @@ Embeddings, Vector Retrieval, and Foundational RAG　｜　難度：核心
 ・程式 30C：RAG 評測框架，同時評分檢索品質與生成忠實度。
 系統案例　建立雲科大校規與課程資訊問答系統，所有答案必須附條號、文件版本與連結。
 成果檢核　交付可運行的 RAG 服務、檢索評測報告與引用正確率統計。
-第 8 篇　應用系統：進階 RAG、Agent 與產品開發
+
+# 第 8 篇　應用系統：進階 RAG、Agent 與產品開發
 Applied Systems: Advanced RAG, Agents, and Product Development　｜　第 31–34 章
 本篇承諾：從 Notebook 走向產品。知識系統、智能體、應用架構與 AI 輔助軟體工程，全部要能交付給真實使用者。
 
-第 31 章　進階 RAG、GraphRAG 與知識系統評測
+## 第 31 章　進階 RAG、GraphRAG 與知識系統評測
 Advanced RAG, GraphRAG, and Knowledge System Evaluation　｜　難度：進階
 叫獸開講　「這台機器去年總共壞了幾次、跟哪些零件有關」——這種問題向量檢索答不好，因為答案不在任何一段文字裡，而在文件之間的關係上。
 本章任務　處理基礎 RAG 解決不了的多跳推理、全域摘要與關係查詢，並建立知識系統的完整評測與維運機制。
@@ -683,7 +732,7 @@ Advanced RAG, GraphRAG, and Knowledge System Evaluation　｜　難度：進階
 系統案例　建構智慧製造維修知識系統，串接 SOP、工單、零件圖譜與感測摘要，支援多跳追因查詢。
 成果檢核　交付知識系統原型、圖譜品質報告、多跳問答評測與權限測試結果。
 
-第 32 章　Agent、MCP、記憶、工作流與多智能體
+## 第 32 章　Agent、MCP、記憶、工作流與多智能體
 Agents, MCP, Memory, Workflows, and Multi-Agent Systems　｜　難度：進階
 叫獸開講　讓 Agent 自己決定要做什麼，聽起來很酷，直到它把資料庫刪了。這一章一半在教怎麼放權，另一半在教怎麼設煞車。
 本章任務　設計具備工具、記憶、規劃與人類核准機制的智能體系統，並理解自主性帶來的風險邊界。
@@ -703,7 +752,7 @@ Agents, MCP, Memory, Workflows, and Multi-Agent Systems　｜　難度：進階
 系統案例　設計 YoloDog 機器人任務 Agent：語音指令轉受限任務規劃，所有移動指令需通過安全檢查與人員接管。
 成果檢核　交付 Agent 系統、工具清單、核准機制設計、評測報告與事故情境演練紀錄。
 
-第 33 章　大模型應用開發：API、框架、成本、UX 與軟體架構
+## 第 33 章　大模型應用開發：API、框架、成本、UX 與軟體架構
 LLM Application Development: APIs, Frameworks, Cost, UX, and Software Architecture　｜　難度：核心
 叫獸開講　能跑的 Notebook 和能上線的產品，中間隔著錯誤處理、成本控制、串流體驗、權限、日誌與一支半夜會響的手機。
 本章任務　把模型能力包裝成真正能交付給使用者的軟體，涵蓋架構設計、成本控管、使用者體驗與失敗處理。
@@ -723,10 +772,13 @@ LLM Application Development: APIs, Frameworks, Cost, UX, and Software Architectu
 系統案例　把第 30 章的校務 RAG 包裝成可對外服務的網頁應用，含登入、權限、引用呈現與回饋按鈕。
 成果檢核　交付可部署的應用原始碼、架構圖、成本估算與使用者測試紀錄。
 
-第 34 章　大模型與程式開發：Code LLM、AI 輔助工程與軟體品質
+## 第 34 章　大模型與程式開發：Code LLM、AI 輔助工程與軟體品質
 LLMs for Code: Code Models, AI-Assisted Engineering, and Software Quality　｜　難度：核心
+
 叫獸開講　AI 幫你寫的程式跑得起來，不代表它是對的。這一章要教學生的不是怎麼讓 AI 寫更多程式，而是怎麼看懂並為它負責。
+
 本章任務　掌握程式碼大模型的原理與使用方法，建立 AI 協作開發的品質保證流程與學術誠信規範。
+
 節次規劃
 34.1　程式碼語料、fill-in-the-middle 與程式碼模型的訓練差異
 34.2　程式碼補全、生成、重構、除錯與測試生成
@@ -736,17 +788,21 @@ LLMs for Code: Code Models, AI-Assisted Engineering, and Software Quality　｜�
 34.6　程式碼評測：功能正確性、通過率、安全掃描與可維護性
 34.7　教學現場的學術誠信：AI 使用揭露、能力評量與作業設計
 34.8　本土實務：中文註解、工控程式、嵌入式與製造領域程式碼
+
 程式實作
 ・程式 34A：以開放權重程式碼模型建立本地補全服務並串接編輯器。
 ・程式 34B：AI 生成程式碼的自動品質關卡，含測試、靜態分析與資安掃描。
 ・程式 34C：以模型為既有專案自動補寫單元測試，量測覆蓋率提升與誤判率。
+
 系統案例　為課程專題建立 AI 協作開發規範，包含使用揭露格式、審查清單與評分方式。
+
 成果檢核　交付 AI 輔助開發流程文件、品質關卡實作與一份含 AI 使用揭露的專題程式碼。
-第 9 篇　部署、評測、安全與治理
+
+# 第 9 篇　部署、評測、安全與治理
 Deployment, Evaluation, Safety, and Governance　｜　第 35–37 章
 本篇承諾：把模型變成服務，再把服務變成可被信任的系統。量化部署、完整評測、紅隊與臺灣法遵一次到位。
 
-第 35 章　量化、高效推論、模型服務與邊緣部署
+## 第 35 章　量化、高效推論、模型服務與邊緣部署
 Quantization, Efficient Inference, Model Serving, and Edge Deployment　｜　難度：核心／進階
 叫獸開講　訓練是一次性的花費，推論是每天都在燒的錢。把模型量化到 4-bit，可能是你整個專案投資報酬率最高的一天工作。
 本章任務　把模型變成穩定、便宜、可監控的服務，涵蓋量化、推論引擎、批次排程、SLO 與邊緣部署。
@@ -766,7 +822,7 @@ Quantization, Efficient Inference, Model Serving, and Edge Deployment　｜　�
 系統案例　將第 26 章的小模型部署到產線工控機與教室伺服器兩種環境，比較維運成本與可靠度。
 成果檢核　交付部署套件、量化品質報告、壓力測試結果、SLO 定義與維運手冊。
 
-第 36 章　大模型與 Agent 的完整評測與臺灣題庫建置
+## 第 36 章　大模型與 Agent 的完整評測與臺灣題庫建置
 Comprehensive Evaluation of LLMs and Agents, and Building Taiwan Benchmarks　｜　難度：核心
 叫獸開講　排行榜上第一名的模型，在你的場域可能是最爛的。真正重要的評測，是你自己出的那 200 題。
 本章任務　建立涵蓋能力、忠實度、安全、成本與使用者價值的多層評測體系，並實際產出可公開的臺灣題庫。
@@ -786,7 +842,7 @@ Comprehensive Evaluation of LLMs and Agents, and Building Taiwan Benchmarks　�
 系統案例　建置並公開一組 200 題的臺灣情境評測集（教育、法規、產業、文化、本土語言），含審題紀錄與授權聲明。
 成果檢核　交付臺灣題庫、評測框架、多模型比較報告與題庫維護計畫。
 
-第 37 章　安全、隱私、紅隊、LLMOps 與臺灣 AI 治理
+## 第 37 章　安全、隱私、紅隊、LLMOps 與臺灣 AI 治理
 Security, Privacy, Red Teaming, LLMOps, and AI Governance in Taiwan　｜　難度：核心
 叫獸開講　系統上線那天不是終點，是責任的起點。這一章談的是：當它出錯的時候，誰負責、怎麼發現、多久修好、要不要通報。
 本章任務　建立大模型系統的威脅模型、隱私保護、營運監控與治理文件，並對照臺灣現行法制與國際框架。
@@ -806,11 +862,11 @@ Security, Privacy, Red Teaming, LLMOps, and AI Governance in Taiwan　｜　難�
 系統案例　為校園 AI 助理撰寫完整治理包：威脅模型、資料流圖、風險矩陣、事故通報流程與使用者告知。
 成果檢核　交付紅隊報告、監控設定、AI 影響評估與治理文件；法律結論須標註待專業確認。
 
-第 10 篇　多模態、具身智慧與總整專題
+# 第 10 篇　多模態、具身智慧與總整專題
 Multimodality, Embodied AI, and Capstone　｜　第 38–40 章
 本篇承諾：把語言模型接上眼睛、耳朵與身體，最後以團隊專題交出一個真正屬於臺灣的大模型系統。
 
-第 38 章　視覺語言模型 VLM：架構、預訓練、遷移與評測
+## 第 38 章　視覺語言模型 VLM：架構、預訓練、遷移與評測
 Vision-Language Models: Architecture, Pretraining, Transfer, and Evaluation　｜　難度：進階
 叫獸開講　讓模型看得懂一張電路板照片，比讓它讀懂一份規格書難得多。因為文字是人寫給人看的，影像不是。
 本章任務　掌握視覺語言模型的架構、對比式與生成式預訓練、少樣本遷移與評測方法，並完成本土場景的實作。
@@ -830,7 +886,7 @@ Vision-Language Models: Architecture, Pretraining, Transfer, and Evaluation　�
 系統案例　回收與環境教育 VLM：將物件辨識與語言解說結合，輸出分類依據、信心度與不確定時的處理方式。
 成果檢核　交付微調後的 VLM、多模態評測報告、錯誤分析與應用示範。
 
-第 39 章　語音大模型、臺灣本土語言與 VLA 具身智慧
+## 第 39 章　語音大模型、臺灣本土語言與 VLA 具身智慧
 Speech Models, Taiwan Local Languages, and Vision-Language-Action Embodied AI　｜　難度：進階
 叫獸開講　臺語、客語、原住民族語的語音資料少得可憐，但它們是最需要 AI 幫忙保存的語言。這件事沒有人會替臺灣做。
 本章任務　把語言模型接上耳朵、嘴巴與身體，處理低資源語音、即時對話與機器人的視覺語言動作模型。
@@ -850,7 +906,7 @@ Speech Models, Taiwan Local Languages, and Vision-Language-Action Embodied AI　
 系統案例　CruX Aero 無人機情境：以視覺、慣性、衛星定位與 VLM 在模擬器中完成受限的導航決策與異常回報。
 成果檢核　交付語音模型微調成果、延遲報告、VLA 模擬任務紀錄與安全機制設計。
 
-第 40 章　總整專題：建構與部署臺灣本土大模型
+## 第 40 章　總整專題：建構與部署臺灣本土大模型
 Capstone: Building and Deploying a Taiwan-Centric Large Language Model　｜　難度：總整
 叫獸開講　四十章走到這裡，你已經有能力做出一個別人做不出來的東西——因為只有你懂這裡的語言、這裡的規則、這裡的產業。
 本章任務　以團隊形式完成問題定義、資料治理、模型選擇、適配、評測、部署、安全與公開展示，形成可延續的研究或產品原型。
