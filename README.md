@@ -7,9 +7,13 @@
 ## 大模型視野、數學與工程基礎
 
 Vision, Mathematics, and Engineering Foundations
+
 第 1 章 大模型全貌、能力邊界與臺灣機會
+
 第 2 章 從統計語言模型到 Transformer 與基礎模型
+
 第 3 章 大模型所需的數學、機率與最佳化
+
 第 4 章 Python、PyTorch 與可重現的大模型實驗環境
 
 李世淵（機器人叫獸） 編著
