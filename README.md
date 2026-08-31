@@ -1,7 +1,7 @@
 臺灣自編大學教科書
 # 大模型導論
 # Introduction to Large Language Models
-
+![大模型導論](https://github.com/leeshihyuan/Introduction-to-Large-Language-Models/blob/main/Introduction-to-Large-Language-Models_Cover-1.jpg "大模型導論")
 
 ## 第 1 篇
 ## 大模型視野、數學與工程基礎
