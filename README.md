@@ -1290,3 +1290,5 @@ Vision, Mathematics, and Engineering Foundations
 **系統案例：** 可選專題：臺灣校務助理、智慧製造維修、AI 資優教學、本土語言學習、法規 RAG、慢性照護衛教、回收辨識、機器人或無人機 VLM/VLA。
 
 **成果檢核：** 最終交付含原始碼、資料與模型卡、實驗紀錄、評測集、安全報告、部署示範、十分鐘簡報與技術論文。
+
+![大模型導論](https://github.com/leeshihyuan/Introduction-to-Large-Language-Models/blob/main/Introduction-to-Large-Language-Models_Cover-2.png "大模型導論")
